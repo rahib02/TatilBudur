@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 export const Context = createContext();
 
 const FilterTurlar = ({ children }) => {
-  const [datas, setdatas] = useState(0);
+  const [datas, setdatas] = useState([]);
   const data = {
     datas,
     setdatas,

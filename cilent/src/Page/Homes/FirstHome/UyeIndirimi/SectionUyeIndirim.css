@@ -1,0 +1,108 @@
+.SectionUyeIndirim {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.SectionUyeIndirim_width {
+    max-width: 1360px;
+    box-sizing: border-box;
+    width: inherit;
+}
+
+.uyeindirim {
+    width: 100%;
+    height: 300px;
+    background-color: #fec610;
+    box-sizing: border-box;
+    display: flex;
+    padding: 30px 250px 0 80px;
+    border-radius: 40px;
+    justify-content: space-between;
+}
+
+.uyeindirim_img {
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.uyeindirim_img img {
+    height: 270px;
+    width: auto;
+}
+
+
+.uyeindirim_text h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    color: rgb(63, 83, 108);
+    line-height: 35px;
+    margin: 20px 0 20px 0;
+}
+
+.uyeindirim_text_email_sorgu {
+    display: flex !important;
+}
+
+.uyeindirim_text_email_icon {
+    border: 1px solid rgb(63, 83, 108);
+    border-radius: 10px;
+    height: 50px;
+    width: 320px;
+    box-sizing: border-box;
+    display: flex;
+
+}
+
+.uyeindirim_text_email {
+    margin-right: 20px;
+}
+
+.emailinput {
+    background-color: #fec610;
+    font-size: 17px;
+    border: none;
+
+}
+
+.emailicon {
+    margin: auto 0 auto 10px;
+}
+
+.uyeindirim_text_gonder {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.text_gonder_button {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#checkbokgonder {
+    width: 25px;
+
+}
+
+.uyeindirim_text_gonder_box {
+    margin-top: 15px;
+    display: flex;
+    color: rgb(63, 83, 108);
+    font-size: 14px;
+    line-height: 19px;
+
+}
+
+.uyeindirim_app {
+    height: 226px;
+    background-color: #e2f2fa;
+    padding: 0 80px 0 80px;
+    border-radius: 40px;
+}

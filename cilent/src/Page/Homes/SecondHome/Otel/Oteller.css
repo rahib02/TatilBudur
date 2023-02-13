@@ -1,0 +1,169 @@
+/* 27sira */
+
+
+.oteller {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.oteller_width {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* oteller filter olunan hissenin css */
+.oteller_filter_field {
+    background-color: aqua;
+    width: 280px;
+}
+
+/* oteller map olunan hissenin css */
+.oteller_map_field {
+    width: 900px;
+}
+
+.oteller_map_field_name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.map_card {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    max-height: 190px;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.map_card_otelimg {
+    box-sizing: border-box;
+}
+
+.map_card_otelimg img {
+    max-height: 190px;
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.map_card_about {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 352px;
+    color: rgb(63, 83, 108);
+
+}
+
+.map_card_oteltext {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.map_card_oteltitle {
+
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.map_card_oteltitle span {
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 15px;
+    line-height: 17px;
+}
+
+.map_card_oteldahil {
+    background-color: whitesmoke;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.map_card_oteldahil span {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+
+}
+
+.map_card_otelekstra {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+
+}
+
+.map_card_otelekstra div {
+    font-weight: 500;
+    font-size: 12px;
+    color: rgb(17, 91, 185);
+    line-height: 17px;
+    margin-right: 30px;
+    width: fit-content;
+}
+
+.map_card_price_detail {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 214px;
+    text-align: right;
+    padding-right: 30px;
+
+}
+
+.map_card_otelstar {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 14px;
+    background-color: whitesmoke;
+    width: fit-content;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.map_card_otelstar span {
+    background-color: #115bb9;
+    color: white;
+    padding: 3px 5px;
+    margin-right: 7px;
+
+
+}
+
+.map_card_otelcount {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+}
+
+.map_card_otelqiymet {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+    color: rgb(132, 55, 188);
+    margin-bottom: 20px;
+}
+
+.map_card_detail button {
+    background-color: #2a5ab3;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 5px 15px;
+}

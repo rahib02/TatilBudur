@@ -11,7 +11,7 @@ const turSchema = new Schema({
   otelkonum: { type: String, required: true },
   otelimg: { type: String, required: true },
   oteltext: { type: String, required: true },
-  oteltitle: { type: String, required: true },
+  oteltitle: { type: Array, required: true },
   oteldahil: { type: String, required: true },
   otelekstra: { type: Array, required: true },
   otelstar: { type: Number, required: true },

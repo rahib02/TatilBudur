@@ -1,0 +1,121 @@
+.firsthome {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+}
+
+.firsthome_carusel_card {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.homecarusel {
+    width: 800px;
+    color: white;
+}
+
+.Section_caruse_items {
+    width: 780px;
+    box-sizing: border-box;
+}
+
+.Section_caruse_item {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+}
+
+.Section_caruse_item_img {
+    position: relative;
+}
+
+.Section_caruse_item_text {
+    position: absolute;
+    margin-left: 444px;
+    width: 336px;
+    height: 328px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Section_caruse_item_text_end p {
+    margin: 5px 0;
+}
+
+.Section_caruse_item_text_end {
+    margin: auto 0;
+}
+
+.Section_caruse_item_text_basliq {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Poppins;
+    line-height: 29px;
+}
+
+.firsthome_carusel_button {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(239, 131, 74);
+    line-height: 18.2px;
+    width: 150px;
+    height: 35px;
+    border-radius: 17px;
+    border: none;
+
+}
+
+
+.firsthome_cards {
+    width: 370px;
+    height: 328px;
+}
+
+.firsthome_card {
+
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.firsthome_card_img {
+    width: 172px;
+    height: 152px;
+}
+
+.firsthome_card_img img {
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 172px;
+    height: 152px;
+
+}
+
+.firsthome_card_text {
+    box-sizing: border-box;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.firsthome_card_text span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(63, 83, 108);
+}
+
+.firsthome_card_text button {
+    margin-top: auto;
+    background-color: rgb(63, 83, 108);
+    color: rgb(255, 255, 254);
+    padding: 5px 20px;
+    border-radius: 16px;
+}
