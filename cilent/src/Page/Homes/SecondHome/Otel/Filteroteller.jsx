@@ -1,12 +1,11 @@
 import React from "react";
-import "./Oteller.css";
 import { useParams } from "react-router-dom";
 import { Context } from "../../../../ContextApi/FilterTurlar";
-import { useContext, useState} from "react";
+import { useContext, useState } from "react";
 import MultiRangeSlider from "multi-range-slider-react";
 import { Link } from "react-router-dom";
-function Oteller() {
-  const { isim } = useParams();
+function Filteroteller() {
+  const { otelkonum } = useParams();
   const { datas } = useContext(Context);
   const [minValue, set_minValue] = useState(25);
   const [maxValue, set_maxValue] = useState(75);
@@ -51,17 +50,14 @@ function Oteller() {
         </div>
         <div className="oteller_map_field">
           <div className="oteller_map_field_header">
-            <div className="oteller_map_field_name">{isim}</div>
-            <div className="oteller_map_field_sort">
-              <div className="oteller_map_field_sort_price">
-                
-              </div>
-              <div className="oteller_map_field_sort_star"></div>
+            <div className="oteller_map_field_name">{otelkonum}</div>
+            <div>
+              <ul></ul>
             </div>
           </div>
           <div className="oteller_map_field_body">
             {datas
-              .filter((x) => x.otel.toLowerCase().includes(isim.toLowerCase()))
+              .filter((x) => x.otelkonum.toLowerCase().includes(otelkonum.toLowerCase()))
               .map((x, index) => (
                 <div className="map_card" key={index}>
                   <div className="map_card_otelimg">
@@ -98,8 +94,8 @@ function Oteller() {
                     </div>
                     <div className="map_card_otelqiymet">{x.otelqiymet} ₺</div>
                     <div className="map_card_detail">
-                      <Link to={x.otelkonum+"/"+x.oteltext}>
-                        <button >Oteli İncele</button>
+                      <Link to={x.oteltext}>
+                         <button>Oteli İncele</button>
                       </Link>
                     </div>
                   </div>
@@ -112,4 +108,4 @@ function Oteller() {
   );
 }
 
-export default Oteller;
+export default Filteroteller;

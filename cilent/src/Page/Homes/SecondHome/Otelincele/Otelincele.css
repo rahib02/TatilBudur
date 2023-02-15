@@ -1,0 +1,351 @@
+.otelincele {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    color: rgb(63, 83, 108);
+}
+
+.otelincele_width {
+    width: 1200px;
+    box-sizing: border-box;
+}
+
+.otelincele_map {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.otelincele_map_img {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.otelincele_map_img_otelvideo {
+    width: fit-content;
+}
+
+.otelincele_map_img_otelimg {
+    box-sizing: border-box;
+}
+
+.otelincele_map_img_otelimg_span {
+    margin: 0 5px;
+}
+
+.otelincele_map_img_otelimg_span img {
+    width: 290px;
+    height: 158px;
+    box-sizing: border-box;
+}
+
+.otelincele_map_rotate {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.otelincele_map_rotate_otelname {
+    display: flex;
+    flex-direction: column;
+}
+
+.otelincele_map_rotate_otelname h1 {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 25px;
+}
+
+.otelincele_map_rotate_link {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.otelincele_map_rotate_ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.otelincele_map_rotate_ul li {
+    margin: 0 auto 0 0;
+}
+
+.otelincele_map_rotate_ul a {
+    text-decoration: none;
+    color: rgb(63, 83, 108);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.otelincele_map_details {
+    margin-top: 50px;
+}
+
+.otelincele_map_details_kullaniciyorum {
+    background-color: whitesmoke;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.otelincele_map_details_kullaniciyorum h6 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.otelincele_map_details_otelyorum {
+    width: 750px;
+}
+
+.otelincele_stars {
+    background-color: white;
+    width: fit-content;
+    position: relative;
+    margin: 15px 0 20px 0;
+}
+
+.otelincele_stars .span_fevkalade {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 2px 10px;
+}
+
+.otelincele_stars .span_stars {
+    background-color: #115bb9;
+    color: white;
+    padding: 2px 5px 3px 5px;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.oteincele_point {
+    display: flex;
+    margin: 10px 0;
+}
+
+.oteincele_point span {
+    font-size: 16px;
+    line-height: 21px;
+    margin-right: auto;
+}
+
+.otelincele_onecikan {
+    margin: 20px 0 0 0;
+}
+
+.otelincele_onecikan h6 {
+    margin-bottom: 10px;
+}
+
+.otelincele_onecikan_text {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+}
+
+.otelincele_onecikan_text div {
+    width: 50%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.otelincele_map_details_odalar {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.odalarpaket {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.odalarpaket_img {
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+.odalarpaket_img h5 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.odalarpaket_img img {
+    width: 280px;
+    height: 160px;
+    border-radius: 15px;
+}
+
+.odalarpaket_text {
+    display: flex;
+    box-sizing: border-box;
+    width: 800px;
+    margin-top: 30px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.odalarpaket_text_icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.odalarpaket_text_icon span {
+    margin: 7px 0;
+}
+
+.odalarpaket_text_daxilolan {
+    margin: 0 auto;
+}
+
+.odalarpaket_text_price {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.odalarpaket_text_price_people {
+    font-size: 10px;
+}
+
+.odalarpaket_text_price_qiymet {
+    margin: 10px 0 20px;
+    font-size: 23px;
+    font-weight: 700;
+    color: rgb(132, 55, 188);
+    line-height: 30px;
+}
+
+.odalarpaket_text_price_rezervasyon {
+    margin-top: 8px;
+}
+
+.odalarpaket_text_price_rezervasyon button {
+    background-color: #115bb9;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 7px 15px;
+    border-radius: 20px;
+}
+
+.otelincele_map_details_kampanyalar {
+    border: 0.3px solid rgb(63, 83, 108);
+    border-radius: 30px;
+    padding: 30px 20px 0 80px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.otelincele_kampanya_text {
+    display: flex;
+    font-size: 25px;
+}
+
+.otelincele_kampanya_kampanyalar_text {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.kampanyalar_text {
+    display: flex;
+    padding: 0 20px 20px 20px;
+}
+
+.kampanyalar_text_div {
+    max-width: 580px;
+    box-sizing: border-box;
+}
+
+.kampanyalar_text_div h4 {
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+.kampanyalar_text_div p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0;
+}
+
+
+.otelincele_map_oteldekiaktiviteler {
+    border-radius: 30px;
+    border: 1px solid rgb(63, 83, 108);
+    padding: 20px 40px;
+}
+
+.otelincele_aktiviteler {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+
+.otelincele_aktiviteler_img {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+.otelincele_aktiviteler_img p {
+    margin: 10px 0 0 0;
+    width: max-content;
+}
+
+.otelincele_aktiviteler_text {
+    width: 800px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.otelincele_aktiviteler_text_div {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.otelincele_aktiviteler_text_div span {
+    width: 33%;
+    box-sizing: border-box;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.otelincele_aktiviteler_text_div p {
+    box-sizing: border-box;
+    margin: 5px 0;
+    font-size: 14px;
+}

@@ -9,6 +9,7 @@ import OtelMap from "./Page/NavbarElement/Contact/OtelMap/OtelMap";
 import FirstHome from "./Page/Homes/FirstHome/FirstHome";
 import Oteller from "./Page/Homes/SecondHome/Otel/Oteller";
 import Otelincele from "./Page/Homes/SecondHome/Otelincele/Otelincele";
+import Filteroteller from "./Page/Homes/SecondHome/Otel/Filteroteller";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
         element: <Oteller />,
       },
       {
-        path: "oteller/:isim/:otelname",
+        path: "oteller/:isim/:otelkonum",
+        element: <Filteroteller />,
+      },
+      {
+        path: "oteller/:isim/:otelkonum/:oteldetal",
         element: <Otelincele />,
       },
     ],
