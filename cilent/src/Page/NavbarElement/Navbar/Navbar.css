@@ -1,12 +1,14 @@
 .tatilbudur_navbar {
     width: 100%;
+    position: relative;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     height: 70px;
     background-color: white;
     position: fixed;
-    z-index: 999;
+    z-index: 10000;
 
 }
 
@@ -17,7 +19,8 @@
 }
 
 .tatilbudur_navbar_companents {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -32,9 +35,14 @@
     width: 230px;
 }
 
+.tatilbudur_navbar_otel_turlar {
+    display: flex;
+}
+
 .tatilbudur_navbar_otel_turlar_ul {
     list-style: none;
     display: flex;
+    margin: auto;
 }
 
 .tatilbudur_navbar_otel_turlar_ul a {
@@ -50,15 +58,66 @@
     display: flex;
 }
 
-.tatilbudur_navbar_otel_icon {
-    margin: auto 0;
+#tatilbudur_navbar_otel_icon {
+    margin-top: auto;
     font-size: 14px;
-    margin-left: 4px;
+    margin-left: 8px;
 }
 
-.tatilbudur_navbar_otel_icon:hover {
-    transform: rotate(180deg);
+.tatilbudur_navbar_otel_menyu_header {
+    width: inherit;
 }
+
+.tatilbudur_navbar_otel_menyu_header_btn {
+    display: flex;
+    border: none;
+    background-color: white;
+}
+
+
+
+.tatilbudur_navbar_otel_menyu {
+    background-color: white;
+    position: absolute;
+    margin-top: 40px;
+    padding: 30px 30px 30px 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    display: flex;
+
+
+
+}
+
+.menyu_left_ul {
+    list-style: none;
+    margin: 0;
+}
+
+.menyu_left_ul li {
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menyu_left_ul_img {
+    margin-right: 20px;
+}
+
+.menyu_left_ul_img img {
+    width: 36px;
+    border-radius: 100px;
+}
+
+
+
+
+
+
+
+
 
 .tatilbudur_navbar_contact_login {
     width: 450px;
@@ -70,6 +129,8 @@
     display: flex;
     list-style: none;
     justify-content: space-between;
+    margin: 10px 0;
+
 }
 
 
@@ -86,4 +147,107 @@
 
 .tatilbudur_navbar_contact_login_ul li:hover {
     background-color: rgb(140, 203, 234);
+}
+
+#otel_super_menu {
+    display: none;
+}
+
+#termaloteller {
+    display: none;
+}
+
+#kisotelleri {
+    display: none;
+}
+
+.otel_menyu_left button {
+    border: none;
+    margin-left: 10px;
+    background-color: whitesmoke;
+}
+
+.otel_menyu_right {
+    margin-left: 50px;
+}
+
+.otel_menyu_right a {
+    margin-bottom: 20px;
+}
+
+.tatilbudur_navbar_burger_menu_btn {
+    display: none;
+}
+
+.tatilbudur_navbar_burger_menu_btn button {
+    background-color: white;
+    font-size: 20px;
+
+}
+
+.tatilbudur_navbar_burger_menu {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+    margin-bottom: 100%;
+}
+
+.tatilbudur_navbar_burger_menu ul {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tatilbudur_navbar_burger_menu li {
+    margin: 10px 0;
+}
+
+.burger_menu_oteller_img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger_menu_oteller_img img {
+    border-radius: 50%;
+}
+
+.burger_menu_oteller_link {
+    margin-top: 10px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+}
+
+#burger_menu_yurtici {
+    display: none;
+}
+
+#burger_menu_kis {
+    display: none;
+}
+
+#burger_menu_termal {
+    display: none;
+}
+
+#burgers_menu {
+    display: none;
+    flex-direction: column;
+}
+
+@media screen and (max-width:760px) {
+    .tatilbudur_navbar {
+        height: auto !important;
+    }
+
+    .tatilbudur_navbar_otel_turlar {
+        display: none !important;
+    }
+
+    .tatilbudur_navbar_contact_login {
+        display: none !important;
+    }
+
+    .tatilbudur_navbar_burger_menu_btn {
+        display: block !important;
+    }
 }

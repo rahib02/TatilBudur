@@ -1,0 +1,10 @@
+Admin panele girmek ucun 
+/admin
+1. admin@gmail.com            Admin123
+2. mensimovrahib44@gmail.com  Rahib123
+Bu ikisi admindi
+1.user@gmail.com              User123
+2.user1@gmail.com             User123
+bu ikiside  sinaq userdi 
+user{x}@gmail.com
+{x} 1-6 ya qeder userrerdi parollari User123

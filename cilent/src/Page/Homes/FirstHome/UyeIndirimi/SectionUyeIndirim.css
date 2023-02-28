@@ -3,12 +3,14 @@
     display: flex;
     justify-content: center;
     box-sizing: border-box;
+    margin: 50px 0;
 }
 
 .SectionUyeIndirim_width {
     max-width: 1360px;
     box-sizing: border-box;
-    width: inherit;
+    width: 100%;
+
 }
 
 .uyeindirim {
@@ -105,4 +107,140 @@
     background-color: #e2f2fa;
     padding: 0 80px 0 80px;
     border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 50px;
+}
+
+.uyeindirim_app_store {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.uyeindirim_app_stores {
+    display: flex;
+    flex-direction: column;
+}
+
+.uyeindirim_app_stores_header {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29px;
+    color: rgb(63, 83, 108);
+    margin-top: auto;
+}
+
+.uyeindirim_app_card {
+    width: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+.uyeindirim_app_card a {
+    color: rgb(63, 83, 108);
+    text-decoration: none;
+    display: flex;
+}
+
+.uyeindirim_app_card_text {
+    margin-left: 10px;
+}
+
+.uyeindirim_app_card_text p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    color: rgb(7, 64, 150);
+
+}
+
+.uyeindirim_app_card_text span {
+    font-size: 400;
+    font-weight: 12px;
+    line-height: 15px;
+    color: rgb(111, 126, 144);
+}
+
+.uyeindirim_app_qr {
+    width: 120px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto 0;
+}
+
+.uyeindirim_app_qr p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0 8px;
+}
+
+.uyeindirim_app_mobile {
+    box-sizing: border-box;
+
+}
+
+.uyeindirim_app_mobile img {
+    height: 226px;
+    width: 150px;
+
+
+}
+
+.uyeindirim_isbirlikler {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+}
+
+.uyeindirim_isbirlik {
+    display: flex;
+    margin: 0 50px;
+}
+
+.uyeindirim_isbirlik_text {
+    display: flex;
+}
+
+.uyeindirim_isbirlik_text p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 160px;
+    margin: auto 20px;
+}
+
+@media screen and (max-width:750px) {
+    .uyeindirim {
+        height: auto !important;
+        padding: 20px 10px !important;
+        flex-direction: column !important;
+    }
+
+    .uyeindirim_text_email_sorgu {
+        flex-wrap: wrap !important;
+    }
+
+    .text_gonder_button {
+        margin: 10px 0 !important;
+    }
+
+    .uyeindirim_app {
+        display: none !important;
+    }
+
+    .uyeindirim_isbirlikler {
+        flex-wrap: wrap !important;
+    }
+
+    .uyeindirim_isbirlik {
+        margin-bottom: 20px !important;
+    }
 }

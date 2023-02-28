@@ -1,6 +1,3 @@
-/* 27sira */
-
-
 .oteller {
     width: 100%;
     box-sizing: border-box;
@@ -18,19 +15,75 @@
 
 /* oteller filter olunan hissenin css */
 .oteller_filter_field {
-    background-color: aqua;
-    width: 280px;
+    background-color: #016DC8;
+    width: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    height: fit-content;
+    border-radius: 20px;
+    color: white;
+}
+
+.oteller_filter_field h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.oteller_filter_field_sonuc p {
+    font-size: 14px;
+}
+
+.oteller_filter_field_sonuc span {
+    color: orange;
+}
+
+.oteller_filter_sort_money {
+    color: yellowgreen;
+}
+
+.oteller_filter_sort_star {
+    color: yellow;
+}
+
+.oteller_filter_sort ul {
+    color: black;
+}
+
+.oteller_filter_sort button {
+    border: none;
+    background-color: #016DC8;
+    color: white;
 }
 
 /* oteller map olunan hissenin css */
 .oteller_map_field {
-    width: 900px;
+    max-width: 900px;
+    box-sizing: border-box;
 }
 
 .oteller_map_field_name {
     font-size: 20px;
     font-weight: 500;
     line-height: 29px;
+}
+
+.oteller_map_field_search input {
+    width: 300px;
+    padding: 3px 5px 3px 10px;
+}
+
+.oteller_map_field_header {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.oteller_map_field_body {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: auto;
 }
 
 .map_card {
@@ -50,6 +103,7 @@
 
 .map_card_otelimg img {
     max-height: 190px;
+    max-width: 253px;
     box-sizing: border-box;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -60,7 +114,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    width: 352px;
+    max-width: 352px;
     color: rgb(63, 83, 108);
 
 }
@@ -167,4 +221,86 @@
     font-weight: 500;
     line-height: 18px;
     padding: 5px 15px;
+}
+
+.map_card_price_mobile {
+    display: none;
+}
+
+.oteller_filter_field_sort_mobile {
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .oteller_width {
+        width: 100% !important;
+        max-width: 750px;
+        flex-direction: column !important;
+    }
+
+    .oteller_filter_field {
+        width: fit-content !important;
+        display: flex !important;
+    }
+
+    .oteller_filter_field_sort {
+        display: flex !important;
+    }
+
+    .oteller_filter_field_sort_mobile {
+        display: flex !important;
+    }
+
+    .oteller_filter_field_sonuc {
+        display: none !important;
+
+    }
+
+    .oteller_filter_field_sort {
+        display: none !important;
+    }
+
+
+
+
+
+
+
+
+
+
+    .map_card {
+        max-height: 400px !important;
+        flex-direction: column !important;
+
+
+    }
+
+    .map_card_otelimg img {
+        max-width: 100% !important;
+        width: 100% !important;
+        border-top-right-radius: 15px !important;
+        border-bottom-left-radius: 0 !important;
+    }
+
+    .map_card_about {
+        display: none !important;
+    }
+
+    .map_card_price_detail {
+        display: none !important;
+    }
+
+    .map_card_otelimg {
+        width: 100% !important;
+    }
+
+    .map_card_price_mobile {
+        margin-top: 20px !important;
+        display: flex;
+    }
+
+    .oteller_map_field_search input {
+        width: 250px !important;
+    }
 }

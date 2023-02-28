@@ -7,8 +7,23 @@
     color: rgb(63, 83, 108);
 }
 
+.otelincele_goback {
+    margin: 20px 0;
+}
+
+.otelincele_goback button {
+    background-color: white;
+    border: none;
+    color: #115bb9;
+}
+
+.otelincele_goback span {
+    margin: 0 5px;
+}
+
 .otelincele_width {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -102,7 +117,8 @@
 }
 
 .otelincele_map_details_otelyorum {
-    width: 750px;
+    max-width: 750px;
+    width: 100%;
 }
 
 .otelincele_stars {
@@ -131,6 +147,7 @@
 .oteincele_point {
     display: flex;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 
 .oteincele_point span {
@@ -257,6 +274,7 @@
     padding: 30px 20px 0 80px;
     display: flex;
     box-sizing: border-box;
+    margin: 60px 0;
 }
 
 .otelincele_kampanya_text {
@@ -325,7 +343,7 @@
 }
 
 .otelincele_aktiviteler_text {
-    width: 800px;
+    max-width: 100%;
     box-sizing: border-box;
     margin-top: 20px;
 }
@@ -348,4 +366,102 @@
     box-sizing: border-box;
     margin: 5px 0;
     font-size: 14px;
+}
+
+.otelincele_map_img_mobile {
+    display: none;
+    justify-content: center;
+    width: 100%;
+}
+
+.otelincele_map_img_mobile img {
+    max-width: 700px;
+    padding: 20px 50px;
+    width: 100% !important;
+}
+
+.otelincele_map_details_kampanyalar_mobile {
+    display: none;
+    border: 0.3px solid rgb(63, 83, 108);
+    border-radius: 30px;
+    padding: 30px 20px 0 80px;
+    box-sizing: border-box;
+    margin: 60px 0;
+}
+
+.otelpaket_mobile {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 30px;
+    margin: 20px 0;
+}
+
+.otelpaket_mobile_img {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.otelpaket_mobile_img div {
+    width: fit-content;
+    box-sizing: border-box;
+    font-size: 30px;
+    border-bottom: 1px black solid;
+
+}
+
+.otelpaket_mobile_img img {
+    max-width: 50%;
+}
+
+@media screen and (max-width:900px) {
+    .otelincele_map_img {
+        display: none !important;
+    }
+
+    .otelincele_map_img_mobile {
+        display: flex;
+    }
+
+    .otelincele_aktiviteler_text_div {
+        flex-direction: column !important;
+    }
+
+    .otelincele_map_rotate_link {
+        display: none !important;
+    }
+
+    .otelincele_map_details_kampanyalar_mobile {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 30px 20px !important;
+    }
+
+    .otelincele_map_details_kampanyalar {
+        display: none !important;
+    }
+
+    .kampanyalar_text {
+        display: block !important;
+    }
+
+    .kampanyalar_img {
+        margin: 10px 0;
+    }
+
+    .otelincele_aktiviteler {
+        flex-direction: column !important;
+    }
+
+    .odalarpaket_text_price {
+        margin-top: 10px;
+    }
+
+    .odalarpaket {
+        display: none !important;
+    }
 }

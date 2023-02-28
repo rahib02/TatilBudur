@@ -1,0 +1,9 @@
+.adminpanel_oteller {
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+}
+
+.otel_tabel td {
+    max-width: 250px;
+}

@@ -1,15 +1,14 @@
 import React from "react";
 import "./SectionUyeIndirim.css";
 import { CgMail } from "react-icons/cg";
+import * as mdb from "mdb-ui-kit";
 import apple from "../../../../img/SectionUyeIndirim/apple.svg";
 import google from "../../../../img/SectionUyeIndirim/googleplay.svg";
 import huawei from "../../../../img/SectionUyeIndirim/huawei.svg";
 import qrcode from "../../../../img/SectionUyeIndirim/qrcode.png";
 import appdeskopt from "../../../../img/SectionUyeIndirim/app.png";
-/* import newslettermodel from "../../../../img/SectionUyeIndirim/newsletter-model.png";
-import newslettermodel from "../../../../img/SectionUyeIndirim/newsletter-model.png";
-import newslettermodel from "../../../../img/SectionUyeIndirim/newsletter-model.png";
-import newslettermodel from "../../../../img/SectionUyeIndirim/newsletter-model.png";  */
+import isbankasi from "../../../../img/SectionUyeIndirim/is-bankası.png";
+import milligurur from "../../../../img/SectionUyeIndirim/milligurur.png";
 import newslettermodel from "../../../../img/SectionUyeIndirim/newsletter-model.png";
 import {Link} from 'react-router-dom'
 function SectionUyeIndirim() {
@@ -62,7 +61,7 @@ function SectionUyeIndirim() {
         </div>
         <div className="uyeindirim_app">
           <div className="uyeindirim_app_stores">
-            <div>TatilBudur uygulamasını indirin, aklınızdaki tatili hemen planlayın!</div>
+            <div className="uyeindirim_app_stores_header">TatilBudur uygulamasını indirin, aklınızdaki tatili hemen planlayın!</div>
             <div className="uyeindirim_app_store">
               <div className="uyeindirim_app_card">
                 <Link to={"/"}>
@@ -103,12 +102,40 @@ function SectionUyeIndirim() {
           </div>
           <div className="uyeindirim_app_qr">
                       <img src={qrcode} alt="" />
-                      <p></p>
+                      <p>İndirmek için
+</p>
+<p>QR Kodu Tarayın</p>
           </div>
           <div  className="uyeindirim_app_mobile">
             <img src={appdeskopt} alt="" />
           </div>
 
+        </div>
+        <div className="uyeindirim_isbirlikler">
+          <div className="uyeindirim_isbirlik">
+            <div className="uyeindirim_isbirlik_img">
+              <img src={milligurur} alt="" />
+            </div>
+            <div className="uyeindirim_isbirlik_text">
+              <p>
+Tatilbudur.com
+Basketbol Milli Takımlar
+Resmi Sponsoru</p>
+            </div>
+            
+          </div>
+           <div className="uyeindirim_isbirlik">
+            <div className="uyeindirim_isbirlik_img">
+              <img src={isbankasi} alt="" />
+            </div>
+            <div className="uyeindirim_isbirlik_text">
+              <p>
+Tatilbudur.com bir
+İş Girişim Sermayesi
+ortaklığıdır</p>
+            </div>
+            
+          </div>
         </div>
       </div>
     </div>

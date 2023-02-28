@@ -2,17 +2,36 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../../../../ContextApi/FilterTurlar";
 import { useContext, useState } from "react";
-import MultiRangeSlider from "multi-range-slider-react";
 import { Link } from "react-router-dom";
+import { MdOutlineStar } from 'react-icons/md';
+import { FaMoneyBillWave } from 'react-icons/fa';
 function Filteroteller() {
   const { otelkonum } = useParams();
   const { datas } = useContext(Context);
-  const [minValue, set_minValue] = useState(25);
-  const [maxValue, set_maxValue] = useState(75);
-  const handleInput = (e) => {
-    set_minValue(e.minValue);
-    set_maxValue(e.maxValue);
+  const { setdatas } = useContext(Context);
+  const [searchs,setsearchs]=useState(" ")
+  const artan = () => {
+    const sortotel = [...datas].sort((a, b) => a.otelqiymet - b.otelqiymet);
+    setdatas(sortotel);
   };
+  const azalan = () => {
+    const sortotel = [...datas].sort((a, b) => b.otelqiymet - a.otelqiymet);
+    setdatas(sortotel);
+  };
+  const artanstar = () => {
+    const sortotel = [...datas].sort((a, b) => a.otelstar - b.otelstar);
+    setdatas(sortotel);
+  };
+  const azalanstar = () => {
+    const sortotel = [...datas].sort((a, b) => b.otelstar - a.otelstar);
+    setdatas(sortotel);
+  };
+  const count = Object.keys(
+   datas.filter((x) => x.otelkonum.toLowerCase().includes(otelkonum.toLowerCase())).filter((x) => x.oteltext.toLowerCase().includes(searchs.toLowerCase()))
+  ).length;
+  const searchdata=(e)=>{
+    setsearchs(e.target.value);
+  }
   return (
     <div className="oteller">
       <div className="oteller_width">
@@ -20,44 +39,42 @@ function Filteroteller() {
           <div className="oteller_filter_field_sonuc">
             <h4>Sonuçları Daraltın</h4>
             <p>
-              <span>{} Otel</span> Listeleniyor
+              <span>{count} Otel</span> Listeleniyor
             </p>
           </div>
-          <div>
-            <MultiRangeSlider
-              min={0}
-              max={100}
-              step={5}
-              minValue={minValue}
-              maxValue={maxValue}
-              onInput={(e) => {
-                handleInput(e);
-              }}
-              label={false}
-              ruler={false}
-              style={{
-                border: "none",
-                boxShadow: "none",
-                padding: "15px 10px",
-              }}
-              barLeftColor="green"
-              barInnerColor="blue"
-              barRightColor="green"
-              thumbLeftColor="lime"
-              thumbRightColor="lime"
-            />
+          <div className="oteller_filter_field_sort">
+            <div className="oteller_filter_sort">
+              <h4>Qiymət <span className="oteller_filter_sort_money"><FaMoneyBillWave/></span></h4>
+              <ul>
+                <li>
+                  <button onClick={artan}>Azdan-Çoxa</button>
+                </li>
+                <li>
+                  <button onClick={azalan}>Çoxdan-Aza</button>
+                </li>
+              </ul>
+            </div>
+            <div className="oteller_filter_sort">
+              <h4>Ulduz <span className="oteller_filter_sort_star"><MdOutlineStar/></span></h4>
+              <ul>
+                <li>
+                  <button onClick={artanstar}>Azdan-Çoxa</button>
+                </li>
+                <li>
+                  <button onClick={azalanstar}>Çoxdan-Aza</button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="oteller_map_field">
           <div className="oteller_map_field_header">
             <div className="oteller_map_field_name">{otelkonum}</div>
-            <div>
-              <ul></ul>
-            </div>
+            <div className="oteller_map_field_search"><input type="text"  placeholder="Otel name search" onChange={searchdata}/></div>
           </div>
           <div className="oteller_map_field_body">
             {datas
-              .filter((x) => x.otelkonum.toLowerCase().includes(otelkonum.toLowerCase()))
+              .filter((x) => x.otelkonum.toLowerCase().includes(otelkonum.toLowerCase())).filter((x) => x.oteltext.toLowerCase().includes(searchs.toLowerCase()))
               .map((x, index) => (
                 <div className="map_card" key={index}>
                   <div className="map_card_otelimg">

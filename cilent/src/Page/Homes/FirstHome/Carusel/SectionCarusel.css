@@ -3,10 +3,12 @@
     box-sizing: border-box;
     justify-content: center;
     display: flex;
+    padding-top: 100px;
 }
 
 .firsthome_carusel_card {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -78,11 +80,11 @@
 }
 
 .firsthome_card {
-
     box-sizing: border-box;
     display: flex;
     border: 1px solid black;
     border-radius: 8px;
+    justify-content: space-between;
 }
 
 .firsthome_card_img {
@@ -118,4 +120,56 @@
     color: rgb(255, 255, 254);
     padding: 5px 20px;
     border-radius: 16px;
+}
+
+@media screen and (max-width:750px) {
+    .firsthome_carusel_card {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+
+    .homecarusel {
+        width: 100% !important;
+    }
+
+    .Section_caruse_items {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        flex-wrap: wrap !important;
+    }
+
+    .Section_caruse_item_img {
+        display: none !important;
+    }
+
+    .Section_caruse_item_text {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 20px !important;
+        position: relative !important;
+        text-align: center !important;
+    }
+
+    .firsthome_cards {
+        width: 100% !important;
+        margin-top: 30px !important;
+    }
+
+    .firsthome_card_text button {
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        line-height: 15px;
+    }
+
+}
+
+@media screen and (max-width:1160px) {
+    .firsthome_cards {
+        display: none;
+    }
+
+    .firsthome_carusel_card {
+        justify-content: center;
+    }
 }

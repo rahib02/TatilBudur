@@ -1,0 +1,10 @@
+.footer {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_section_color {
+    background-color: #f8f4f0;
+}

@@ -1,0 +1,222 @@
+.rezervasyon {
+    background-color: whitesmoke;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.rezervasyon_width {
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rezervasyon_misafir {
+    max-width: 800px;
+    width: 100%;
+}
+
+
+.misafir_text_esas {
+    display: flex;
+    flex-direction: column;
+}
+
+.misafir_gender {
+    margin: 10px 0;
+    display: flex;
+}
+
+.misafir_detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.misafir_detal_item {
+    display: flex;
+    width: 45%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.misafir_detal_items {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.PhoneInputInput {
+    height: 30px;
+    width: 100%;
+    max-width: 311px;
+}
+
+.misafir_detal_item input {
+    width: 100%;
+    height: 30px;
+}
+
+.errormesagge {
+    width: fit-content;
+    color: red;
+    margin-left: 20px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.errormessagge {
+    margin-top: 5px;
+    width: 100%;
+    color: red;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.rezervasyon_otel {
+    background-color: white;
+    width: 370px;
+    box-sizing: border-box;
+}
+
+.rezervasyon_otel_header {
+    padding: 20px;
+    border-bottom: 1px solid;
+}
+
+.rezervasyon_otel_header h3 {
+    font-size: 20px;
+}
+
+.rezervasyon_otel_header_span span {
+    color: rgb(8, 210, 255);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.rezervasyon_otel_header_daxil {
+    background-color: whitesmoke;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.rezervasyon_otel_img {
+    padding: 20px;
+    display: flex;
+}
+
+.rezervasyon_otel_img span {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.rezervasyon_otel_img img {
+    width: 120px;
+    height: 72px;
+}
+
+.rezervasyon_otel_daxil {
+    color: green;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.rezervasyon_otel_daxil span {
+    margin-right: 30px;
+}
+
+.rezervasyon_otel_tarih {
+    padding: 0 20px;
+    border-bottom: 1px solid;
+}
+
+.rezervasyon_otel_tarih ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rezervasyon_otel_tarih ul li {
+    background-color: whitesmoke;
+    padding: 7px 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px
+}
+
+.rezervasyon_otel_price {
+    padding: 20px;
+    background-color: #edf4fd;
+    color: #446ebd;
+}
+
+.rezervasyon_otel_price h4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rezervasyon_otel_btn {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.rezervasyon_otel_btn button {
+    background-color: rgb(88, 88, 255);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+}
+
+.rezervasyon_otel_mobil {
+    display: none;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+@media screen and (max-width:1000px) {
+    .rezervasyon_width {
+        flex-direction: column;
+    }
+
+    .rezervasyon_otel_mobil {
+        display: flex;
+        width: 100%;
+    }
+
+    .rezervasyon_otel {
+        width: 100% !important;
+    }
+
+    .rezervasyon_otel .rezervasyon_otel_header {
+        display: none !important;
+    }
+
+    .rezervasyon_otel .rezervasyon_otel_header {
+        display: none !important;
+    }
+
+    .rezervasyon_otel .rezervasyon_otel_img {
+        display: none !important;
+    }
+
+    .rezervasyon_otel .rezervasyon_otel_tarih {
+        display: none !important;
+    }
+
+    .rezervasyon_otel .rezervasyon_otel_daxil {
+        display: none !important;
+    }
+
+    .rezervasyon_misafir {
+        padding: 10px;
+    }
+}

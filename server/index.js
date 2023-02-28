@@ -5,28 +5,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
 dotenv.config();
-const { Schema } = mongoose;
-const turSchema = new Schema({
-  otel: { type: String, required: true },
-  otelkonum: { type: String, required: true },
-  otelimg: { type: String, required: true },
-  oteltext: { type: String, required: true },
-  oteltitle: { type: Array, required: true },
-  oteldahil: { type: String, required: true },
-  otelekstra: { type: Array, required: true },
-  otelstar: { type: Number, required: true },
-  otelqiymet: { type: Number, required: true },
-  otelpaket: { type: Array, required: true },
-  otelkampanya: { type: Array, required: true },
-  otelozellik: { type: Array, required: true },
-  otelaktivite: { type: Array, required: true },
-  otelhavuzplaj: { type: Array, required: true },
-  otelbalayi: { type: Array, required: true },
-  otelkonsept: { type: Array, required: true },
-  otelnotlar: { type: Array, required: true },
-});
-
-const ButunTurlar = mongoose.model("users", turSchema);
+const { ButunTurlar, Login } = require("./model.js");
 
 const app = express();
 app.use(cors());
@@ -45,10 +24,33 @@ app.get("/butunturlar", (req, res) => {
     }
   });
 });
+app.get("/login", (req, res) => {
+  Login.find({}, (err, docs) => {
+    if (!err) {
+      res.send(docs);
+    } else {
+      res.status(404).json({ message: "Not Found" });
+    }
+  });
+});
 /* id gore axdaris */
 app.get("/butunturlar/:id", (req, res) => {
   const { id } = req.params;
   ButunTurlar.findById(id, (err, docs) => {
+    if (!err) {
+      if (docs) {
+        res.send(docs);
+      } else {
+        res.status(404).json({ message: "Not Found" });
+      }
+    } else {
+      res.status(500).json({ message: "Server Problem" });
+    }
+  });
+});
+app.get("/login/:id", (req, res) => {
+  const { id } = req.params;
+  Login.findById(id, (err, docs) => {
     if (!err) {
       if (docs) {
         res.send(docs);
@@ -84,7 +86,15 @@ app.post("/butunturlar", (req, res) => {
   yenitur.save();
   res.status(200).json({ message: "Tur elave olundu" });
 });
-
+app.post("/login", (req, res) => {
+  const yenilogin = new Login({
+    email: req.body.email,
+    password: req.body.password,
+    position: req.body.position,
+  });
+  yenilogin.save();
+  res.status(200).json({ message: "user elave olundu" });
+});
 /* silme */
 app.delete("/butunturlar/:id", (req, res) => {
   const { id } = req.params;
@@ -96,7 +106,16 @@ app.delete("/butunturlar/:id", (req, res) => {
     }
   });
 });
-
+app.delete("/login/:id", (req, res) => {
+  const { id } = req.params;
+  Login.findByIdAndDelete(id, (err) => {
+    if (!err) {
+      res.status(200).json({ message: "Delete" });
+    } else {
+      res.status(404).json({ message: err });
+    }
+  });
+});
 const PORT = process.env.PORT;
 const url = process.env.CONNECTION_URL.replace(
   "<password>",

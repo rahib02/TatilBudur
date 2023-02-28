@@ -38,10 +38,7 @@ function Otelincele() {
               className="otelincele_goback_btn"
             >
               <span className="otelincele_goback_icon">
-                <AiOutlineArrowLeft />
-              </span>
-              <span className="otelincele_goback_text">
-                arama sonuçlarına geri dön
+                <AiOutlineArrowLeft /> arama sonuçlarına geri dön
               </span>
             </button>
           </Link>
@@ -77,6 +74,9 @@ function Otelincele() {
                     ))
                   )}
                 </div>
+              </div>
+              <div className="otelincele_map_img_mobile">
+                {<img src={x.otelimg} alt="" />}
               </div>
               <div className="otelincele_map_rotate">
                 <div className="otelincele_map_rotate_otelname">
@@ -147,170 +147,241 @@ function Otelincele() {
                 <div className="otelincele_map_details_odalar">
                   {x.otelpaket.map((y) =>
                     Object.values(y).map((z, index) => (
-                      <div className="odalarpaket" key={index}>
-                        <div className="odalarpaket_img">
-                          <h5>Oda</h5>
-                          <img src={z.odaimg} alt="" /></div>
-                        <div className="odalarpaket_text">
-                          <div className="odalarpaket_text_icon">
-                            <span><HiWifi/> Wifi</span>
-                            <span><GiShower/> Duş</span>
-                            <span><GiWoodPile/> Parke Zemin</span>
-                            <span><RiSafe2Fill/> Emanet Kasa</span> 
+                      <div key={index}>
+                        <div className="odalarpaket" key={index}>
+                          <div className="odalarpaket_img">
+                            <h5>Oda</h5>
+                            <img src={z.odaimg} alt="" />
                           </div>
-                          <div className="odalarpaket_text_daxilolan">
-                            {x.oteldahil}
-                          </div>
-                          <div className="odalarpaket_text_price">
-                            <div className="odalarpaket_text_price_people">
-                              2 Yetişkin 4 Gece <b>Toplam Fiyat</b>
+                          <div className="odalarpaket_text">
+                            <div className="odalarpaket_text_icon">
+                              <span>
+                                <HiWifi /> Wifi
+                              </span>
+                              <span>
+                                <GiShower /> Duş
+                              </span>
+                              <span>
+                                <GiWoodPile /> Parke Zemin
+                              </span>
+                              <span>
+                                <RiSafe2Fill /> Emanet Kasa
+                              </span>
                             </div>
-                            <div className="odalarpaket_text_price_qiymet">
-                              {z.odaqiymet} ₺ 
+                            <div className="odalarpaket_text_daxilolan">
+                              {x.oteldahil}
                             </div>
-                            <div className="odalarpaket_text_price_garanti">
-                              <GiReceiveMoney/> En İyi Fiyat Garantisi 
-                            </div>
-                            <div className="odalarpaket_text_price_rezervasyon">
-                              <Link to={"/"}>
-                                <button>Rezervasyon Yap</button>
-                              </Link>
+                            <div className="odalarpaket_text_price">
+                              <div className="odalarpaket_text_price_people">
+                                2 Yetişkin 4 Gece <b>Toplam Fiyat</b>
+                              </div>
+                              <div className="odalarpaket_text_price_qiymet">
+                                {z.odaqiymet} ₺
+                              </div>
+                              <div className="odalarpaket_text_price_garanti">
+                                <GiReceiveMoney /> En İyi Fiyat Garantisi
+                              </div>
+                              <div className="odalarpaket_text_price_rezervasyon">
+                                <Link to={"/rezervasyon" + "/" + x.oteltext}>
+                                  <button>Rezervasyon Yap</button>
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        
+                        <div className="otelpaket_mobile">
+                          <div className="otelpaket_mobile_img">
+                            <div>
+                              <img src={z.odaimg} alt="" />
+                            </div>
+                            <div>Oda</div>
+                          </div>
+                          <div className="otelpaket_mobile_text">
+                            <div className="odalarpaket_text_price">
+                              <div className="odalarpaket_text_price_people">
+                                2 Yetişkin 4 Gece <b>Toplam Fiyat</b>
+                              </div>
+                              <div className="odalarpaket_text_price_qiymet">
+                                {z.odaqiymet} ₺
+                              </div>
+                              <div className="odalarpaket_text_price_garanti">
+                                <GiReceiveMoney /> En İyi Fiyat Garantisi
+                              </div>
+                              <div className="odalarpaket_text_price_rezervasyon">
+                                <Link to={"/rezervasyon" + "/" + x.oteltext}>
+                                  <button>Rezervasyon Yap</button>
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     ))
                   )}
                 </div>
                 <div className="otelincele_map_details_kampanyalar">
-                  <div className="otelincele_kampanya_text"><FaPercentage style={{fontSize:"30px"}}/> Kampanyalar</div>
+                  <div className="otelincele_kampanya_text">
+                    <FaPercentage style={{ fontSize: "30px" }} /> Kampanyalar
+                  </div>
                   <div className="otelincele_kampanya_kampanyalar">
-                    {
-                      x.otelkampanya.map((y)=>(
-                        Object.values(y).map((z,index)=>(
-                          <div className="otelincele_kampanya_kampanyalar_text">
-                            <div className="kampanyalar_text">
-                              <span><FaPercentage /></span>
-                              <div className="kampanyalar_text_div">
-                                <h4>{z.banktext}</h4>
-                                  <p>{z.banktitle}</p>
-                              </div>
+                    {x.otelkampanya.map((y) =>
+                      Object.values(y).map((z, index) => (
+                        <div className="otelincele_kampanya_kampanyalar_text" key={index}>
+                          <div className="kampanyalar_text">
+                            <span>
+                              <FaPercentage />
+                            </span>
+                            <div className="kampanyalar_text_div">
+                              <h4>{z.banktext}</h4>
+                              <p>{z.banktitle}</p>
                             </div>
-                             <div className="kampanyalar_img"><img src="https://cdn.tatilbudur.net/banner/2022-11/origin/ziraat-bankkartinizla-tek-seferde-gerceklestireceginiz-tatil-alisverisinize-1250-tlye-varan-bankkart-lira-1667548836.jpg" alt="" /></div>
                           </div>
-                        ))
+                          <div className="kampanyalar_img">
+                            <img
+                              src="https://cdn.tatilbudur.net/banner/2022-11/origin/ziraat-bankkartinizla-tek-seferde-gerceklestireceginiz-tatil-alisverisinize-1250-tlye-varan-bankkart-lira-1667548836.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
                       ))
-                    }
+                    )}
+                  </div>
+                </div>
+                <div className="otelincele_map_details_kampanyalar_mobile">
+                  <div className="otelincele_kampanya_text">
+                    <FaPercentage style={{ fontSize: "30px" }} /> Kampanyalar
+                  </div>
+                  <div className="otelincele_kampanya_kampanyalar">
+                    {x.otelkampanya.map((y) =>
+                      Object.values(y).map((z, index) => (
+                        <div className="otelincele_kampanya_kampanyalar_text" key={index}>
+                          <div className="kampanyalar_text">
+                            <span>
+                              <FaPercentage />
+                            </span>
+                            <div className="kampanyalar_img">
+                              <img
+                                src="https://cdn.tatilbudur.net/banner/2022-11/origin/ziraat-bankkartinizla-tek-seferde-gerceklestireceginiz-tatil-alisverisinize-1250-tlye-varan-bankkart-lira-1667548836.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div className="kampanyalar_text_div">
+                              <h4>{z.banktext}</h4>
+                              <p>{z.banktitle}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    )}
                   </div>
                 </div>
                 <div className="otelincele_map_oteldekiaktiviteler">
                   <div className="otelincele_aktiviteler">
                     <div className="otelincele_aktiviteler_img">
-                      <span><FaHotel /></span>
+                      <span>
+                        <FaHotel />
+                      </span>
                       <p>Genel Özellikler</p>
                     </div>
                     <div className="otelincele_aktiviteler_text">
-                       <div className="otelincele_aktiviteler_text_div">
-                        {
-                      x.otelozellik.map((y)=>(
-                        Object.values(y).map((z,index)=>(
-                          <span key={index}>{z}</span>
-                        ))
-                      ))
-                    }
-                       </div>
-                       <div>* ile işaretli özellikler ücretlidir.</div>
+                      <div className="otelincele_aktiviteler_text_div">
+                        {x.otelozellik.map((y) =>
+                          Object.values(y).map((z, index) => (
+                            <span key={index}>{z}</span>
+                          ))
+                        )}
+                      </div>
+                      <div>* ile işaretli özellikler ücretlidir.</div>
                     </div>
                   </div>
                   <div className="otelincele_aktiviteler">
                     <div className="otelincele_aktiviteler_img">
-                      <span><FaUmbrellaBeach/></span>
+                      <span>
+                        <FaUmbrellaBeach />
+                      </span>
                       <p>Havuz ve Plajı</p>
                     </div>
                     <div className="otelincele_aktiviteler_text">
-                       <div className="otelincele_aktiviteler_text_div">
-                        {
-                      x.otelhavuzplaj.map((y)=>(
-                        Object.values(y).map((z,index)=>(
-                          <span key={index}>{z}</span>
-                        ))
-                      ))
-                    }
-                       </div>
-                       <div>* ile işaretli özellikler ücretlidir.</div>
+                      <div className="otelincele_aktiviteler_text_div">
+                        {x.otelhavuzplaj.map((y) =>
+                          Object.values(y).map((z, index) => (
+                            <span key={index}>{z}</span>
+                          ))
+                        )}
+                      </div>
+                      <div>* ile işaretli özellikler ücretlidir.</div>
                     </div>
                   </div>
                   <div className="otelincele_aktiviteler">
                     <div className="otelincele_aktiviteler_img">
-                      <span><BiRun /></span>
+                      <span>
+                        <BiRun />
+                      </span>
                       <p>Tesis Aktiviteleri</p>
                     </div>
                     <div className="otelincele_aktiviteler_text">
-                       <div className="otelincele_aktiviteler_text_div">
-                        {
-                      x.otelaktivite.map((y)=>(
-                        Object.values(y).map((z,index)=>(
-                          <span key={index}>{z}</span>
-                        ))
-                      ))
-                    }
-                       </div>
-                       <div>* ile işaretli özellikler ücretlidir.</div>
+                      <div className="otelincele_aktiviteler_text_div">
+                        {x.otelaktivite.map((y) =>
+                          Object.values(y).map((z, index) => (
+                            <span key={index}>{z}</span>
+                          ))
+                        )}
+                      </div>
+                      <div>* ile işaretli özellikler ücretlidir.</div>
                     </div>
-                  </div>           
+                  </div>
                   <div className="otelincele_aktiviteler">
                     <div className="otelincele_aktiviteler_img">
-                      <span><GiBigDiamondRing /></span>
+                      <span>
+                        <GiBigDiamondRing />
+                      </span>
                       <p>Balayı</p>
                     </div>
                     <div className="otelincele_aktiviteler_text">
-                       <div className="otelincele_aktiviteler_text_div">
-                        {
-                      x.otelbalayi.map((y)=>(
-                        Object.values(y).map((z,index)=>(
-                          <span key={index}>{z}</span>
-                        ))
-                      ))
-                    }
-                       </div>
-                       <div>* ile işaretli özellikler ücretlidir.</div>
+                      <div className="otelincele_aktiviteler_text_div">
+                        {x.otelbalayi.map((y) =>
+                          Object.values(y).map((z, index) => (
+                            <span key={index}>{z}</span>
+                          ))
+                        )}
+                      </div>
+                      <div>* ile işaretli özellikler ücretlidir.</div>
                     </div>
                   </div>
                   <div className="otelincele_aktiviteler">
                     <div className="otelincele_aktiviteler_img">
-                      <span><AiOutlineReconciliation /></span>
+                      <span>
+                        <AiOutlineReconciliation />
+                      </span>
                       <p>Konsept Özellikleri</p>
                     </div>
                     <div className="otelincele_aktiviteler_text">
-                       <div className="otelincele_aktiviteler_text_div">
-                        {
-                      x.otelkonsept.map((y)=>(
-                        Object.values(y).map((z,index)=>(
-                          <p key={index}>{z}</p>
-                        ))
-                      ))
-                    }
-                       </div>
-                       <div>* ile işaretli özellikler ücretlidir.</div>
+                      <div className="otelincele_aktiviteler_text_div">
+                        {x.otelkonsept.map((y) =>
+                          Object.values(y).map((z, index) => (
+                            <p key={index}>{z}</p>
+                          ))
+                        )}
+                      </div>
+                      <div>* ile işaretli özellikler ücretlidir.</div>
                     </div>
                   </div>
                   <div className="otelincele_aktiviteler">
                     <div className="otelincele_aktiviteler_img">
-                      <span><GrNotes /></span>
+                      <span>
+                        <GrNotes />
+                      </span>
                       <p>Önemli Notlar</p>
                     </div>
                     <div className="otelincele_aktiviteler_text">
-                       <div className="otelincele_aktiviteler_text_div">
-                        {
-                      x.otelnotlar.map((y)=>(
-                        Object.values(y).map((z,index)=>(
-                          <p key={index}>{z}</p>
-                        ))
-                      ))
-                    }
-                       </div>
-                       <div>* ile işaretli özellikler ücretlidir.</div>
+                      <div className="otelincele_aktiviteler_text_div">
+                        {x.otelnotlar.map((y) =>
+                          Object.values(y).map((z, index) => (
+                            <p key={index}>{z}</p>
+                          ))
+                        )}
+                      </div>
+                      <div>* ile işaretli özellikler ücretlidir.</div>
                     </div>
                   </div>
                 </div>

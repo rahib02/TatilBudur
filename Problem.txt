@@ -1,0 +1,3 @@
+Ilk sehifede 750-780 arasinda responsivlik itir
+Eyni hesabnan 2 defe qeydiyat elemek olur datani map eliyib axdarmaq olar amma responsivliknen mesgulam
+Login register hissesinde 400px asagida responsivlik itir
