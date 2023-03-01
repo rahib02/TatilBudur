@@ -22,6 +22,7 @@ import Otels from "./Page/AdminPanel/Admin/Otel/Otels";
 import Oteladd from "./Page/AdminPanel/Admin/Otel/Oteladd/Oteladd";
 import Users from "./Page/AdminPanel/Admin/User/Users/Users";
 import Useradd from "./Page/AdminPanel/Admin/User/Useradd/Useradd";
+import Otelview from "./Page/AdminPanel/Admin/Otel/Otelview/Otelview";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
             element: <Otels />,
           },
         ],
+      },
+      {
+        path: "otel/:id",
+        element: <Otelview />,
       },
 
       {

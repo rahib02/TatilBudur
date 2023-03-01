@@ -1,11 +1,12 @@
 import React from "react";
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Context } from "../../../../ContextApi/Admindata";
 import { AiTwotoneStar } from 'react-icons/ai';
 import "./Otels.css"
 import axios from "axios";
 function Otels() {
+  const navigate = useNavigate();
   const { serverdata } = useContext(Context);
   const {setserverdata}=useContext(Context)
   
@@ -14,7 +15,7 @@ function Otels() {
     setserverdata(serverdata.filter(x=>x._id!=id))
   }
   const otelview=(id)=>{
-    
+    navigate(`/adminpaneltatilbudur/otel/${id}`)
   }
   const [searchs,setsearchs]=useState(" ")
   const [konum,setkonum]=useState(" ")
@@ -77,7 +78,9 @@ function Otels() {
                 <td style={{color:"green",fontSize:"17px"}}>{x.otelqiymet} ₺</td>
                 <td  style={{color:"yellow",fontSize:"17px"}}>{x.otelstar} <AiTwotoneStar /></td>
                 <td>
+                  <button type="button" className="btn btn-success btn-sm btn-rounded" onClick={()=>otelview(x._id)}>View</button>
                   <button type="button" className="btn btn-danger btn-sm btn-rounded" onClick={()=>oteldelte(x._id)}>Delte</button>
+                  
 
                 </td>
               </tr>

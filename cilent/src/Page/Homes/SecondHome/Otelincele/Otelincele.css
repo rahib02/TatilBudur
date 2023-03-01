@@ -392,7 +392,7 @@
 .otelpaket_mobile {
     width: 100%;
     box-sizing: border-box;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     padding: 30px;
@@ -418,7 +418,12 @@
     max-width: 50%;
 }
 
+
 @media screen and (max-width:900px) {
+    .otelpaket_mobile {
+        display: flex !important;
+    }
+
     .otelincele_map_img {
         display: none !important;
     }
